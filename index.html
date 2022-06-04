@@ -6,7 +6,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  body {
+  padding: 3rem;
+  font-size: 16px;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 30rem;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+</style>
 <body>
   <h1>Plant database</h1>
+
+  <p>Plase use https://houseplant-api.herokuapp.com/api/plantName</p>
+
+  <textarea name="" id="example" cols="30" rows="10"></textarea>
 </body>
+<script>
+  const p = document.querySelector('#example')
+
+  p.textContent = JSON.stringify({
+    "Money Tree": {
+    "light":
+      'Position your Money Tree in medium to bright indirect light, turning it every time you water it for even growth and leaf development. This plant will also adapt to low and fluorescent lights.',
+    "water":
+      'Your Money Tree prefers deep but infrequent watering. Water your Money Tree when the top 50%-75% of the soil is dry. Water the plant until it runs from the drainage holes and discard any excess water from the saucer. To prevent root rot, make sure your plant is never standing in water. Be sure to turn your Money Tree each time you water to allow for even growth and leaf development. Your Money Tree requires less water in the winter months when growth slows. ',
+    "humidity":
+      'Your Money Tree prefers a bit of extra humidity so make sure you increase the humidity in the winter months with a pebble tray or a humidifier. It will also appreciate regular misting year-round using a Mister.',
+    "temperature":
+      'Your Money Tree is most comfortable in temperatures between 65-80 degrees.',
+    "food":
+      'Feed once a month in the spring and summer when it is producing new leaves with a water-soluble, well-balanced plant food at half the recommended strength. No fertilizer is necessary during the winter when plant growth naturally slows. Always make sure the soil is damp before applying any fertilizer.',
+    "toxicity":
+      'Your Money Tree plant is safe for pets, according to the ASPCA.',
+    "additionalInfo":
+      'Try not to move your Money Tree very often, they prefer to stay in the same spot. If you do need to relocate, you may see a bit of leaf drop. Not to worry—it will adjust. If you need to trim your Money Tree, be sure to use clean, sharp Plant Snips.'
+  }
+  }, null, 4)
+</script>
 </html>
